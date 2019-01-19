@@ -1,0 +1,25 @@
+ <div class="card">
+          <div class="card-content">
+            <div class="content">
+                <p class="title is-4"><%= @article.title %></p>
+            </div>
+             <div class="content">
+                <p class="title is-4"><%= @article.date %></p>
+            </div>
+            <div class="content has-description">
+              <%= truncate @article.description,length:100 %>
+            </div>
+            <div class="content has-description">
+              <%= truncate @article.body,length:200 %>
+            </div>
+           
+          </div>
+          <div class="card-footer">
+            <div class="card-footer-item">
+              <%= link_to 'edit',edit_article_path(@article) %>
+            </div>
+           <div class="card-footer-item">
+              <%=link_to 'delete',article_path(@article),method: :delete,data:{confirm:'確定要刪除嗎？'} %>
+            </div> 
+          </div>
+        </div>

@@ -1,0 +1,33 @@
+   <%= form_for @article do |f| %>
+        <div class="column is-10">
+          <div class="column is-10">
+            <div class="field">
+            <%= f.label :title,'標題', class:'label' %>
+              <div class="control">
+              <%= f.text_field :title,class:'input',require: true %>
+              </div>
+            </div>
+            <div class="field">
+              <%= f.label :date,'日期', class:'label' %>
+              <div class="control">
+              <%= f.text_field :date,class:'input' %>
+              </div>
+            </div>
+            <div class="field">
+             <%= f.label :description,'簡短敘述', class:'label' %>
+              <div class="control">
+               <%= f.text_area :description,class:'textarea' %>
+              </div>
+            </div>
+              <div class="field">
+             <%= f.label :body,'文章內容', class:'label' %>
+              <div class="control">
+               <%= f.text_area :body,class:'textarea' %>
+              </div>
+            </div>
+            <div class="field">
+            	<%= f.submit 'submit',class:'button is-primary is-medium is-fullwidth' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
