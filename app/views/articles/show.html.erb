@@ -6,11 +6,17 @@
              <div class="content">
                 <p class="title is-4"><%= @article.date %></p>
             </div>
+            <div class="media-left">
+                <figure class="image is-48x48">
+                <%= image_tag @article.feature_url(:thumb).to_s %>
+                </figure>
+
+            </div>
             <div class="content has-description">
               <%= truncate @article.description,length:100 %>
             </div>
             <div class="content has-description">
-              <%= truncate @article.body,length:200 %>
+            <%=  raw @article.body %>
             </div>
            
           </div>

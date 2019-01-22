@@ -1736,3 +1736,2436 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 50ms (Views: 44.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-20 21:02:55 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 22ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-20 21:02:58 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (34.2ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (14.5ms)
+Completed 200 OK in 267ms (Views: 255.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-20 21:03:01 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (27.7ms)
+  Rendered articles/new.html.erb within layouts/application (34.4ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 119ms (Views: 111.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2019-01-20 21:03:05 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FFwOgWnsRiJWLZb1umEkG7bHINSMkhIwl3GWFvPAqVBwskHEe4wEzFpwAOjHOOFrrSwj0QSoV5u2hRydjQQggQ=="}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-20 21:03:05 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-20 21:03:09 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (4.4ms)
+  Rendered application/_navbar.html.erb (5.2ms)
+Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-20 21:03:12 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (8.3ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-20 21:03:19 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-20 21:03:19 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (5.8ms)
+  Rendered application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2019-01-20 21:03:35 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jGpdpxjujeemK16Izd31Gaw8SBBAgHxtXIXZvwpJymDzvXfThb+KouF+XAIkfpn+Zj2DS1O1wLs8fBTRoDWO4g==", "member"=>{"email"=>"ken86042897@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "ken86042897@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 153ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-20 21:03:36 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/new.html.erb within layouts/application (5.4ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 43ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 20:51:06 +0800
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (27.1ms)
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (15.2ms)
+Completed 200 OK in 5256ms (Views: 5233.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 20:51:17 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (17.2ms)
+  Rendered articles/new.html.erb within layouts/application (20.6ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 93ms (Views: 84.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCkeditorAssets (20190121125947)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190121125947_create_ckeditor_assets.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "data_fingerprint" varchar, "type" varchar(30), "width" integer, "height" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190121125947_create_ckeditor_assets.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_ckeditor_assets_on_type" ON "ckeditor_assets" ("type")[0m
+  ↳ db/migrate/20190121125947_create_ckeditor_assets.rb:17
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190121125947"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 21:00:26 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (13.6ms)
+  Rendered articles/new.html.erb within layouts/application (19.4ms)
+  Rendered application/_navbar.html.erb (1.0ms)
+Completed 200 OK in 1709ms (Views: 1653.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/ckeditor/pictures" for 127.0.0.1 at 2019-01-21 21:00:39 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"upload"=>#<ActionDispatch::Http::UploadedFile:0x007fcde56ac600 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190121-54814-ykigo8.png>, @original_filename="螢幕快照 2019-01-20 下午11.55.35.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-20 \xE4\xB8\x8B\xE5\x8D\x8811.55.35.png\"\r\nContent-Type: image/png\r\n">, "ckCsrfToken"=>"XdKXf9rWDoBxbz7XT4i5Phe7qKUy5nsw63N7D64e"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-21 21:01:15 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2PhNOuFeiQiLGt0TqZBiaHWS7IuIaw4YhTSRPADq8bTbpxL+EIw//mhZZQk5ekqwMNQWckLaBG+6pYSCt3fHfw==", "article"=>{"title"=>"可以放圖了嗎", "date"=>"20190121", "description"=>"這樣會怎樣", "body"=>"<p>這樣哩</p>\r\n"}, "commit"=>"submit"}
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (1.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "可以放圖了嗎"], ["date", "20190121"], ["description", "這樣會怎樣"], ["body", "<p>這樣哩</p>\r\n"], ["created_at", "2019-01-21 13:01:15.673755"], ["updated_at", "2019-01-21 13:01:15.673755"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 21:01:15 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.1ms)
+Completed 200 OK in 60ms (Views: 55.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 21:06:41 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (9.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (11.7ms)
+Completed 200 OK in 1357ms (Views: 1344.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 21:06:47 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (15.3ms)
+  Rendered articles/new.html.erb within layouts/application (20.4ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 94ms (Views: 79.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/ckeditor/pictures" for 127.0.0.1 at 2019-01-21 21:06:58 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"upload"=>#<ActionDispatch::Http::UploadedFile:0x007fa6e01aa5c0 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190121-54901-iuwn81.png>, @original_filename="螢幕快照 2019-01-20 下午11.55.35.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-20 \xE4\xB8\x8B\xE5\x8D\x8811.55.35.png\"\r\nContent-Type: image/png\r\n">, "ckCsrfToken"=>"XdKXf9rWDoBxbz7XT4i5Phe7qKUy5nsw63N7D64e"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 21:08:58 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (9.0ms)
+  Rendered articles/new.html.erb within layouts/application (12.9ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 5363ms (Views: 5321.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/ckeditor/pictures" for 127.0.0.1 at 2019-01-21 21:09:13 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"upload"=>#<ActionDispatch::Http::UploadedFile:0x007fbfab484c08 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190121-55011-kvwzey.png>, @original_filename="螢幕快照 2019-01-20 下午7.50.35.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-20 \xE4\xB8\x8B\xE5\x8D\x887.50.35.png\"\r\nContent-Type: image/png\r\n">, "ckCsrfToken"=>"XdKXf9rWDoBxbz7XT4i5Phe7qKUy5nsw63N7D64e"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+Completed 200 OK in 71ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 22:04:32 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (10.0ms)
+  Rendered articles/new.html.erb within layouts/application (15.5ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 1713ms (Views: 1672.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/ckeditor/pictures" for 127.0.0.1 at 2019-01-21 22:04:45 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"upload"=>#<ActionDispatch::Http::UploadedFile:0x007fb0d34e4e00 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190121-56330-r5tq1i.png>, @original_filename="螢幕快照 2019-01-20 下午11.55.35.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-20 \xE4\xB8\x8B\xE5\x8D\x8811.55.35.png\"\r\nContent-Type: image/png\r\n">, "ckCsrfToken"=>"XdKXf9rWDoBxbz7XT4i5Phe7qKUy5nsw63N7D64e"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+Completed 200 OK in 40ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ckeditor/pictures?CKEditor=article_body&CKEditorFuncNum=1&langCode=zh" for 127.0.0.1 at 2019-01-21 22:35:11 +0800
+Processing by Ckeditor::PicturesController#index as HTML
+  Parameters: {"CKEditor"=>"article_body", "CKEditorFuncNum"=>"1", "langCode"=>"zh"}
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application
+  [1m[36mCkeditor::Picture Load (0.7ms)[0m  [1m[34mSELECT  "ckeditor_assets".* FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture') ORDER BY id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 24], ["OFFSET", 0]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb:9
+  Rendered collection of /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset.html.erb [0 times] (0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture')[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/lib/ckeditor/paginatable.rb:49
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application (28.5ms)
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset_tmpl.html.erb (1.2ms)
+Completed 200 OK in 550ms (Views: 496.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/ckeditor/pictures?qqfile=%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2019-01-20+%E4%B8%8B%E5%8D%8811.18.51.png" for 127.0.0.1 at 2019-01-21 22:35:22 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"qqfile"=>"螢幕快照 2019-01-20 下午11.18.51.png"}
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/2c1574e86713f38246a718db29f80f006084e92220190121-56330-jby668 to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/4e8581daa7cd30730e3a17d7672a7fc520190121-56330-ilzkh5.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/4e8581daa7cd30730e3a17d7672a7fc520190121-56330-ilzkh5.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]' -auto-orient -resize "800>" '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/ff2a941ea2d7f98c1887e33a631f606020190121-56330-vpj2mp'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/ff2a941ea2d7f98c1887e33a631f606020190121-56330-vpj2mp to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/1d7d4a6ca01fb3d138ecfdbb7e6b0db220190121-56330-vc4ru8
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]' -auto-orient -resize "x100" -crop "118x100+21+0" +repage '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/ff2a941ea2d7f98c1887e33a631f606020190121-56330-hhwgom'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/ff2a941ea2d7f98c1887e33a631f606020190121-56330-hhwgom to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/f1afcd8039d1363f90434df341cc356520190121-56330-33f9u6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/4e8581daa7cd30730e3a17d7672a7fc520190121-56330-1m6ucxt.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/4e8581daa7cd30730e3a17d7672a7fc520190121-56330-1m6ucxt.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/aa0d3cd06245ea52a91e17465df28a3a20190121-56330-njwhox.png[0]' 2>/dev/null
+  [1m[36mCkeditor::Picture Create (2.7ms)[0m  [1m[32mINSERT INTO "ckeditor_assets" ("data_file_name", "data_content_type", "data_file_size", "data_fingerprint", "type", "width", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["data_file_name", "螢幕快照_2019-01-20_下午11.18.51.png"], ["data_content_type", "image/png"], ["data_file_size", 345204], ["data_fingerprint", "4b6da87598d2c19823593d21e061b353"], ["type", "Ckeditor::Picture"], ["width", 2880], ["height", 1800], ["created_at", "2019-01-21 14:35:23.641750"], ["updated_at", "2019-01-21 14:35:23.641750"]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+Completed 200 OK in 1639ms (Views: 0.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/ckeditor/pictures?CKEditor=article_body&CKEditorFuncNum=1&langCode=zh" for 127.0.0.1 at 2019-01-21 22:36:02 +0800
+Processing by Ckeditor::PicturesController#index as HTML
+  Parameters: {"CKEditor"=>"article_body", "CKEditorFuncNum"=>"1", "langCode"=>"zh"}
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application
+  [1m[36mCkeditor::Picture Load (0.3ms)[0m  [1m[34mSELECT  "ckeditor_assets".* FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture') ORDER BY id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 24], ["OFFSET", 0]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb:9
+  Rendered collection of /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset.html.erb [1 times] (28.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture')[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/lib/ckeditor/paginatable.rb:49
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application (41.5ms)
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset_tmpl.html.erb (0.7ms)
+Completed 200 OK in 87ms (Views: 84.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-21 22:37:25 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wNrqOMWb2oKKn9D/UyjijIaVzqEjTgPRM7ldXAuqyN3DhbX8NElsdGncaOXDwspUw9M0WOn/CaYMKEjivDf+Fg==", "article"=>{"title"=>"test_picture", "date"=>"20190121", "description"=>"test", "body"=>"<p><a href=\"/ckeditor_assets/pictures/1/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-20_%E4%B8%8B%E5%8D%8811.18.51.png\"><img alt=\"\" src=\"/ckeditor_assets/pictures/1/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-20_%E4%B8%8B%E5%8D%8811.18.51.png\" style=\"width: 800px; height: 500px;\" /></a></p>\r\n"}, "commit"=>"submit"}
+  [1m[36mMember Load (1.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "test_picture"], ["date", "20190121"], ["description", "test"], ["body", "<p><a href=\"/ckeditor_assets/pictures/1/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-20_%E4%B8%8B%E5%8D%8811.18.51.png\"><img alt=\"\" src=\"/ckeditor_assets/pictures/1/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-20_%E4%B8%8B%E5%8D%8811.18.51.png\" style=\"width: 800px; height: 500px;\" /></a></p>\r\n"], ["created_at", "2019-01-21 14:37:25.615748"], ["updated_at", "2019-01-21 14:37:25.615748"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 22:37:25 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (4.6ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.7ms)
+Completed 200 OK in 74ms (Views: 68.5ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2019-01-21 22:43:44 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CbeLsoXckEIRjwR9YXBgW/EoppKqGj2N1Hg+cotShbQK6NR2dA4mtPLMvGfxmkiDtG5ca2CrN/rr6SvMPM+zfw=="}
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 22:43:44 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 22:43:50 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+  Rendered application/_navbar.html.erb (5.0ms)
+Completed 200 OK in 109ms (Views: 103.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 22:43:53 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 22:43:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (14.9ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 122ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2019-01-21 22:44:01 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jbMQJlpKFyun+a4HdwBJMohHw9i9uiowMsh32vCix/GnRY80LSiY1IYsQvLbUFjxRdmtY0X/S9a3KGFCMIp2w==", "member"=>{"email"=>"ken86042897@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.8ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "ken86042897@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 154ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 22:44:01 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (5.0ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 23:01:38 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 21ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 23:01:43 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (14.3ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (14.7ms)
+Completed 200 OK in 1438ms (Views: 1428.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:01:47 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (12.4ms)
+  Rendered articles/new.html.erb within layouts/application (21.3ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 92.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2019-01-21 23:01:55 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QoHjsZwve6dlXnnrUBalp3D9/f2avhkcjtuLoRET5skhe01o8dLoaFdJO7PupxfZHiKGq7wVXSjpvtKiC5YWUw=="}
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 23:01:55 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:01:59 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:01:59 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (6.5ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 139ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:08:29 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (14.9ms)
+  Rendered application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 200ms (Views: 190.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:09:19 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (31.9ms)
+  Rendered application/_navbar.html.erb (0.9ms)
+Completed 200 OK in 1643ms (Views: 1621.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:09:29 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zKN1K7DA4hUJWlux0f1Shaw7gazNrOgCsZQiRBRyTu3Tkn7s/8dB1cqSPhlDSvZG+KV777wLfXfxCc/mhiJfmg==", "member"=>{"email"=>"ken86042897@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (1.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "ken86042897@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 162ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:09:30 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/new.html.erb within layouts/application (7.8ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 48.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 23:09:34 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (7.8ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.7ms)
+Completed 200 OK in 68ms (Views: 61.7ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2019-01-21 23:09:40 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Oh5KPunsTZ+bdVXKEIZHgteqUz0A5Qj7G2oTfeYm3BuvLmfccKrR3PxQ2KAn1xnwnQzeqGKZByLj9Ao7ylOO9Q=="}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 23:09:40 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:09:44 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:09:44 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:11:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.3ms)
+  Rendered members/sessions/new.html.erb within layouts/application (6.2ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_up" for 127.0.0.1 at 2019-01-21 23:11:30 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering members/registrations/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.4ms)
+  Rendered members/registrations/new.html.erb within layouts/application (7.9ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members" for 127.0.0.1 at 2019-01-21 23:12:57 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OvTTQJL+jqbUasH+igDvF+Kop0QS6UIAnBOa/dq9t77bphVDbv3igUOGafgJcppiORNRxFY10PPD8BvECrSsjw==", "member"=>{"email"=>"cchou@180dc.org", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "members" WHERE "members"."email" = ? LIMIT ?[0m  [["email", "cchou@180dc.org"], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mMember Create (0.9ms)[0m  [1m[32mINSERT INTO "members" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "cchou@180dc.org"], ["encrypted_password", "$2a$11$t9B7W3xY1ts5Rdj2F3zdv.u78tr4BU4woAP9WeOAJR9e9XuPxEAh6"], ["created_at", "2019-01-21 15:12:57.612949"], ["updated_at", "2019-01-21 15:12:57.612949"]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 144ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:12:57 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.1ms)
+  Rendered articles/new.html.erb within layouts/application (5.3ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/members/sign_out" for 127.0.0.1 at 2019-01-21 23:13:00 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"E8ZfbTIuvfk1TDo+JOBBkFJlazXAPpvcxMyz8xUNeKBvRujM47vb0eTpl1dKsxVeubFTLmp+w4Pokl09wB9QTA=="}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-21 23:13:00 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.1ms)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 23:13:04 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+  Rendered application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 81ms (Views: 74.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:13:10 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:13:10 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.4ms)
+  Rendered members/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 23:14:58 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (10.1ms)
+  Rendered application/_navbar.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 71.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:15:02 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:15:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.2ms)
+  Rendered members/sessions/new.html.erb within layouts/application (6.3ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 71.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/members/sign_up" for 127.0.0.1 at 2019-01-21 23:15:11 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/members/sign_up"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/articles" for 127.0.0.1 at 2019-01-21 23:15:44 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.8ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:15:46 +0800
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:15:46 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.2ms)
+  Rendered members/sessions/new.html.erb within layouts/application (8.5ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 67.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:23:47 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering members/sessions/new.html.erb within layouts/application
+  Rendered members/shared/_links.html.erb (1.6ms)
+  Rendered members/sessions/new.html.erb within layouts/application (11.8ms)
+  Rendered application/_navbar.html.erb (1.2ms)
+Completed 200 OK in 103ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/members/sign_in" for 127.0.0.1 at 2019-01-21 23:23:57 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"agOqgS5mEHscLBeSB+wfQ9/X0ZXTFjbmLCPRF4DHsl+m9+kB5LKH6fcECMGi2dlv3e75psUoyiBtBmAkZvXtuw==", "member"=>{"email"=>"ken86042897@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."email" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["email", "ken86042897@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 140ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-21 23:23:57 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/new.html.erb within layouts/application (7.5ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ckeditor/pictures?CKEditor=article_body&CKEditorFuncNum=1&langCode=zh" for 127.0.0.1 at 2019-01-21 23:24:15 +0800
+Processing by Ckeditor::PicturesController#index as HTML
+  Parameters: {"CKEditor"=>"article_body", "CKEditorFuncNum"=>"1", "langCode"=>"zh"}
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application
+  [1m[36mCkeditor::Picture Load (1.2ms)[0m  [1m[34mSELECT  "ckeditor_assets".* FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture') ORDER BY id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 24], ["OFFSET", 0]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb:9
+  Rendered collection of /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset.html.erb [1 times] (14.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture')[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/lib/ckeditor/paginatable.rb:49
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application (46.2ms)
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset_tmpl.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 102.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/ckeditor/pictures?qqfile=%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2019-01-20+%E4%B8%8B%E5%8D%887.57.28.png" for 127.0.0.1 at 2019-01-21 23:24:23 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"qqfile"=>"螢幕快照 2019-01-20 下午7.57.28.png"}
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3ee463c4cc75283fa1bc98a10c8999ce857d2adb20190121-56661-13ufb4c to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/82dcbca9ec3347d5c52c7f2a28d47f4920190121-56661-bjywfv.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/82dcbca9ec3347d5c52c7f2a28d47f4920190121-56661-bjywfv.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]' -auto-orient -resize "800>" '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/a2b1fd8bff7771f77a370f5ebb33094e20190121-56661-114ru18'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/a2b1fd8bff7771f77a370f5ebb33094e20190121-56661-114ru18 to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/2372482451c10252276bcbb8d87f73fd20190121-56661-87lunv
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]' -auto-orient -resize "x100" -crop "118x100+180+0" +repage '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/a2b1fd8bff7771f77a370f5ebb33094e20190121-56661-1lswa9l'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/a2b1fd8bff7771f77a370f5ebb33094e20190121-56661-1lswa9l to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/ff732adaae2455cd76c589105fd815f620190121-56661-1p4rnlq
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/82dcbca9ec3347d5c52c7f2a28d47f4920190121-56661-1t1s8fz.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/82dcbca9ec3347d5c52c7f2a28d47f4920190121-56661-1t1s8fz.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/3b5fd082430474ad4a9a08769eebe8ee20190121-56661-1njhovx.png[0]' 2>/dev/null
+  [1m[36mCkeditor::Picture Create (1.1ms)[0m  [1m[32mINSERT INTO "ckeditor_assets" ("data_file_name", "data_content_type", "data_file_size", "data_fingerprint", "type", "width", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["data_file_name", "螢幕快照_2019-01-20_下午7.57.28.png"], ["data_content_type", "image/png"], ["data_file_size", 70415], ["data_fingerprint", "f751dc5f7c60b1d981f0caf637f352c5"], ["type", "Ckeditor::Picture"], ["width", 1438], ["height", 300], ["created_at", "2019-01-21 15:24:23.726076"], ["updated_at", "2019-01-21 15:24:23.726076"]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+Completed 200 OK in 435ms (Views: 0.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:27:08 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (13.6ms)
+  Rendered articles/new.html.erb within layouts/application (24.2ms)
+  Rendered application/_navbar.html.erb (1.0ms)
+Completed 200 OK in 239ms (Views: 202.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:27:49 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.5ms)
+  Rendered articles/new.html.erb within layouts/application (10.7ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 66.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:28:26 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (4.6ms)
+  Rendered application/_navbar.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:43:01 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (1.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (11.0ms)
+  Rendered articles/new.html.erb within layouts/application (18.2ms)
+  Rendered application/_navbar.html.erb (1.3ms)
+Completed 200 OK in 206ms (Views: 181.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:43:30 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.9ms)
+  Rendered articles/new.html.erb within layouts/application (9.2ms)
+  Rendered application/_navbar.html.erb (2.0ms)
+Completed 200 OK in 72ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:44:32 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/new.html.erb within layouts/application (6.8ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 10:56:08 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 23ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:56:34 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (11.8ms)
+  Rendered articles/new.html.erb within layouts/application (14.3ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 1644ms (Views: 1575.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:57:51 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (4.5ms)
+  Rendered application/_navbar.html.erb (0.9ms)
+Completed 200 OK in 64ms (Views: 57.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:58:43 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (5.7ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 57.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 10:59:49 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/new.html.erb within layouts/application (4.8ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 49.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:00:30 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/new.html.erb within layouts/application (4.8ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:00:55 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.3ms)
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+  Rendered application/_navbar.html.erb (0.6ms)
+Completed 200 OK in 55ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:02:42 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (2.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.2ms)
+  Rendered articles/new.html.erb within layouts/application (9.8ms)
+  Rendered application/_navbar.html.erb (1.1ms)
+Completed 200 OK in 88ms (Views: 65.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:03:35 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.2ms)
+  Rendered articles/new.html.erb within layouts/application (9.3ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:04:19 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (4.3ms)
+  Rendered application/_navbar.html.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:07:11 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (7.8ms)
+  Rendered application/_navbar.html.erb (0.8ms)
+Completed 200 OK in 82ms (Views: 73.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:07:22 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (8.4ms)
+  Rendered articles/new.html.erb within layouts/application (13.6ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 72.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 11:13:16 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (1.0ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.1ms)
+  Rendered articles/new.html.erb within layouts/application (9.4ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 100ms (Views: 88.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-22 11:14:38 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pXVP81wngu3E0MP+YkFXVXTx7t8d7Y5nQMPSPJqg/+qLtV95T/1p/Ac1T9zcqlmx1Zzs70pJlZfRwqqxWNYWlw==", "article"=>{"title"=>"", "date"=>"", "description"=>"", "body"=>""}, "commit"=>"submit"}
+  [1m[36mMember Load (0.9ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (1.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["date", ""], ["description", ""], ["body", ""], ["created_at", "2019-01-22 03:14:38.325978"], ["updated_at", "2019-01-22 03:14:38.325978"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 16ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 11:14:38 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (3.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.7ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-22 11:14:49 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pXVP81wngu3E0MP+YkFXVXTx7t8d7Y5nQMPSPJqg/+qLtV95T/1p/Ac1T9zcqlmx1Zzs70pJlZfRwqqxWNYWlw==", "article"=>{"title"=>"", "date"=>"", "description"=>"", "body"=>""}, "commit"=>"submit"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["date", ""], ["description", ""], ["body", ""], ["created_at", "2019-01-22 03:14:49.550167"], ["updated_at", "2019-01-22 03:14:49.550167"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 12ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 11:14:49 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.4ms)
+Completed 200 OK in 69ms (Views: 65.1ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFeatureToArticles (20190122080526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "stores" ADD "feature" varchar[0m
+  ↳ db/migrate/20190122080526_add_feature_to_articles.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFeatureToArticles (20190122080526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "articles" ADD "feature" varchar[0m
+  ↳ db/migrate/20190122080526_add_feature_to_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190122080526"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFeatureToArticles (20190122080526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aarticles" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "body" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "feature" varchar DEFAULT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "aarticles" ("id","title","date","description","body","created_at","updated_at","feature")
+                     SELECT "id","title","date","description","body","created_at","updated_at","feature" FROM "articles"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "articles"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "date" varchar DEFAULT NULL, "description" varchar DEFAULT NULL, "body" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("id","title","date","description","body","created_at","updated_at")
+                     SELECT "id","title","date","description","body","created_at","updated_at" FROM "aarticles"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aarticles"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190122080526"]]
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddFeatureToArticles (20190122080526)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "articles" ADD "feature" varchar[0m
+  ↳ db/migrate/20190122080526_add_feature_to_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190122080526"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 16:18:34 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (16.3ms)
+  Rendered articles/new.html.erb within layouts/application (19.9ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 1548ms (Views: 1503.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 16:22:25 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/new.html.erb within layouts/application (5.1ms)
+  Rendered application/_navbar.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 43.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/ckeditor/pictures?CKEditor=article_body&CKEditorFuncNum=1&langCode=zh" for 127.0.0.1 at 2019-01-22 16:22:53 +0800
+Processing by Ckeditor::PicturesController#index as HTML
+  Parameters: {"CKEditor"=>"article_body", "CKEditorFuncNum"=>"1", "langCode"=>"zh"}
+  Rendering /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application
+  [1m[36mCkeditor::Picture Load (0.9ms)[0m  [1m[34mSELECT  "ckeditor_assets".* FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture') ORDER BY id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 24], ["OFFSET", 0]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb:9
+  Rendered collection of /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset.html.erb [2 times] (11.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture')[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/lib/ckeditor/paginatable.rb:49
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application (55.8ms)
+  Rendered /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/views/ckeditor/shared/_asset_tmpl.html.erb (0.9ms)
+Completed 200 OK in 122ms (Views: 110.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/ckeditor/pictures?qqfile=%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2019-01-13+%E4%B8%8A%E5%8D%8811.40.27.png" for 127.0.0.1 at 2019-01-22 16:23:02 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"qqfile"=>"螢幕快照 2019-01-13 上午11.40.27.png"}
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/0d968568f1fae8c6f561fad4d77a6f7f2320b51220190122-58247-1x8y740 to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/dbba1c89a47c3cd8ff74d5e46f087fb720190122-58247-9m61e2.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/dbba1c89a47c3cd8ff74d5e46f087fb720190122-58247-9m61e2.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]' -auto-orient -resize "800>" '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/0ab10fe2a7b6df090a7976a36ff5453e20190122-58247-pxp4p4'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/0ab10fe2a7b6df090a7976a36ff5453e20190122-58247-pxp4p4 to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/259545b8ca221235d45663289d6f259120190122-58247-uyz2yn
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]'
+Command :: convert '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]' -auto-orient -resize "x100" -crop "118x100+21+0" +repage '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/0ab10fe2a7b6df090a7976a36ff5453e20190122-58247-2kvyjx'
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/0ab10fe2a7b6df090a7976a36ff5453e20190122-58247-2kvyjx to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/fec4f63f32a444481fc7a3f6a2ed5fc320190122-58247-1dwuhfh
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+[paperclip] Trying to link /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png to /var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/dbba1c89a47c3cd8ff74d5e46f087fb720190122-58247-ah3gww.png
+Command :: file -b --mime '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/dbba1c89a47c3cd8ff74d5e46f087fb720190122-58247-ah3gww.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/8cd365426b419ddaf0763ded822f058820190122-58247-1niawda.png[0]' 2>/dev/null
+  [1m[36mCkeditor::Picture Create (2.3ms)[0m  [1m[32mINSERT INTO "ckeditor_assets" ("data_file_name", "data_content_type", "data_file_size", "data_fingerprint", "type", "width", "height", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["data_file_name", "螢幕快照_2019-01-13_上午11.40.27.png"], ["data_content_type", "image/png"], ["data_file_size", 543867], ["data_fingerprint", "4837410fc6ebbea38bff1113a572977c"], ["type", "Ckeditor::Picture"], ["width", 2880], ["height", 1800], ["created_at", "2019-01-22 08:23:03.947132"], ["updated_at", "2019-01-22 08:23:03.947132"]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/bundler/gems/ckeditor-2def63b8be9b/app/controllers/ckeditor/application_controller.rb:13
+Completed 200 OK in 1571ms (Views: 0.2ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-22 16:23:32 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2Pt+Puz+ncUV8Ech/7BEoJsspO/9fk8GB52//Fdyrh1o/1y6GkRZteyTT45Fc/2IwGwo+hR4syJHw5yMysjxQ==", "article"=>{"title"=>"一次來個幾張", "date"=>"2019012２", "feature"=>#<ActionDispatch::Http::UploadedFile:0x007fed5d023580 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190122-58247-ilr1q2.png>, @original_filename="螢幕快照 2019-01-22 下午1.53.58.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[feature]\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-22 \xE4\xB8\x8B\xE5\x8D\x881.53.58.png\"\r\nContent-Type: image/png\r\n">, "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at", "feature") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "一次來個幾張"], ["date", "2019012２"], ["description", "新的課好刺激"], ["body", "<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"], ["created_at", "2019-01-22 08:23:32.125065"], ["updated_at", "2019-01-22 08:23:32.125065"], ["feature", "螢幕快照_2019-01-22_下午1.53.58.png"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 21ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:23:32 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (3.0ms)
+Completed 200 OK in 72ms (Views: 68.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:31:11 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (336.0ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x007fed57d89b58>:0x007fed576149e0>):
+    19:             
+    20:   <%=  raw article.body %>
+    21: </div>
+    22: <%=link_to edit_store_path(store),class:'button is-small is-primary is-outlined is-edit' do %>
+    23: 	            <i class="fa fa-pencil-square-o">修改</i>
+    24: <% end %>
+    25: <% if article != @articles.last %>
+  
+app/views/articles/index.html.erb:22:in `block in _app_views_articles_index_html_erb__4537145965068948239_70328674986460'
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb__4537145965068948239_70328674986460'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:31:56 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (295.0ms)
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x007fed57d89b58>:0x007fed5d882f50>):
+    19:             
+    20:   <%=  raw article.body %>
+    21: </div>
+    22: <%=link_to edit_article_path(store),class:'button is-small is-primary is-outlined is-edit' do %>
+    23: 	            <i class="fa fa-pencil-square-o">修改</i>
+    24: <% end %>
+    25: <% if article != @articles.last %>
+  
+app/views/articles/index.html.erb:22:in `block in _app_views_articles_index_html_erb__4537145965068948239_70328726592840'
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb__4537145965068948239_70328726592840'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:32:20 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mMember Load (0.7ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (3.6ms)
+Completed 200 OK in 107ms (Views: 101.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2019-01-22 16:32:27 +0800
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.2ms)
+  Rendered articles/edit.html.erb within layouts/application (6.6ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 16:32:39 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wfSMatNlm78UP7+j5fSyODjh23C9p1KN3QKObITUUUwDhJHQk7lvak1agiihJRWJ2Je+sXdGf9N9TuPeeGYX+g==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[36mArticle Update (0.5ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "一次來個幾張_改改改"], ["updated_at", "2019-01-22 08:32:39.273288"], ["id", 8]]
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:32:39 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.6ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:34:08 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (239.0ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x007fed57d89b58>:0x007fed5c720730>):
+    22: <%=link_to edit_article_path(article),class:'button is-small is-primary is-outlined is-edit' do %>
+    23: 	            <i class="fa fa-pencil-square-o">修改</i>
+    24: <% end %>
+    25: <%=link_to store_path(store) do %>
+    26:  <i class="fa fa-pencil-square-o">看完整</i>
+    27: <% end %>
+    28: <% if article != @articles.last %>
+  
+app/views/articles/index.html.erb:25:in `block in _app_views_articles_index_html_erb__4537145965068948239_70328717478020'
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb__4537145965068948239_70328717478020'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:34:29 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (241.0ms)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `store' for #<#<Class:0x007fed57d89b58>:0x007fed5c359958>):
+    22: <%=link_to edit_article_path(article),class:'button is-small is-primary is-outlined is-edit' do %>
+    23: 	            <i class="fa fa-pencil-square-o">修改</i>
+    24: <% end %>
+    25: <%=link_to store_path(store) do %>
+    26:  <i class="fa fa-pencil-square-o">看完整</i>
+    27: <% end %>
+    28: <% if article != @articles.last %>
+  
+app/views/articles/index.html.erb:25:in `block in _app_views_articles_index_html_erb__4537145965068948239_70328715497880'
+app/views/articles/index.html.erb:1:in `_app_views_articles_index_html_erb__4537145965068948239_70328715497880'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:35:18 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.0ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:35:35 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (4.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:35:39 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.5ms)
+Completed 200 OK in 58ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2019-01-22 16:35:51 +0800
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.9ms)
+  Rendered articles/edit.html.erb within layouts/application (6.1ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:36:24 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 1)):
+    10:               <%= truncate @article.description,length:100 %>
+    11:             </div>
+    12:             <div class="content has-description">
+    13:               <%= truncate raw @article.body,length:200 %>
+    14:             </div>
+    15:            
+    16:           </div>
+  
+app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__4573463937790760827_70328717002080'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:36:45 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `html' for #<String:0x007fed5dcf49d0>):
+    10:               <%= truncate @article.description,length:100 %>
+    11:             </div>
+    12:             <div class="content has-description">
+    13:               <%= truncate @article.body.html,length:200 %>
+    14:             </div>
+    15:            
+    16:           </div>
+  
+app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__4573463937790760827_70328724799800'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:37:32 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (257.5ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fed57d89b58>:0x007fed5c599308>
+Did you mean?  @article):
+    10:               <%= truncate @article.description,length:100 %>
+    11:             </div>
+    12:             <div class="content has-description">
+    13:              <%=  raw article.body %>
+    14:             </div>
+    15:            
+    16:           </div>
+  
+app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__4573463937790760827_70328716676740'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:38:08 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (280.2ms)
+Completed 500 Internal Server Error in 293ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fed57d89b58>:0x007fed5da58fa0>
+Did you mean?  @article):
+    10:               <%= truncate @article.description,length:100 %>
+    11:             </div>
+    12:             <div class="content has-description">
+    13:         <!--      <%=  raw article.body %> -->
+    14:             </div>
+    15:            
+    16:           </div>
+  
+app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__4573463937790760827_70328727555260'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:38:18 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.3ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2019-01-22 16:38:26 +0800
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/edit.html.erb within layouts/application (7.8ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:38:35 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.1ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.5ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:43:38 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (8.5ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.9ms)
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:43:44 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (319.9ms)
+Completed 500 Internal Server Error in 341ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fed57d89b58>:0x007fed5740fd98>
+Did you mean?  @article):
+    10:               <%= truncate @article.description,length:100 %>
+    11:             </div>
+    12:             <div class="content has-description">
+    13:             <%=  raw article.body %>
+    14:             </div>
+    15:            
+    16:           </div>
+  
+app/views/articles/show.html.erb:13:in `_app_views_articles_show_html_erb__4573463937790760827_70328673936360'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:43:58 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.7ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:46:11 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (313.9ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `article' for #<#<Class:0x007fed57d89b58>:0x007fed5d97a728>
+Did you mean?  @article):
+     8:             </div>
+     9:             <div class="media-left">
+    10:                 <figure class="image is-48x48">
+    11:                 <%= image_tag article.feature_url.to_s %>
+    12:                 </figure>
+    13: 
+    14:             </div>
+  
+app/views/articles/show.html.erb:11:in `_app_views_articles_show_html_erb__4573463937790760827_70328727099620'
+Started GET "/articles/8" for 127.0.0.1 at 2019-01-22 16:46:24 +0800
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.4ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2019-01-22 16:46:32 +0800
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/edit.html.erb within layouts/application (6.9ms)
+  Rendered application/_navbar.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 16:46:38 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gT0/ZkOSQlqFiyZSBjELqj78/IIY3eD0OgB62kA9FSRDTSLcA062j9zuG9lC4Kwb3oqZQ9I8zaqaTBdovI9Tkg==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:46:38 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.9ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.3ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:49:30 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (20.3ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (16.8ms)
+Completed 200 OK in 121ms (Views: 109.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:49:39 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.6ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (3.8ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:55:01 +0800
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:31: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  version :thumb do
+           ^
+/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:46: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/uploaders/feature_uploader.rb:31: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/uploaders/feature_uploader.rb:46: syntax error, unexpected keyword_end, expecting end-of-input
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:55:29 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (9.2ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (9.8ms)
+Completed 200 OK in 85ms (Views: 75.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:56:25 +0800
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:3: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  include CarrierWave::RMagick
+                     ^):
+  
+app/uploaders/feature_uploader.rb:3: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 16:56:49 +0800
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:4: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  include CarrierWave::MiniMagick
+                     ^):
+  
+app/uploaders/feature_uploader.rb:4: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:6:in `index'
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 17:05:21 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T04EMQnCuIcYt/QwycQm8QtFwtz/ktzshpLGZyIv2IphjhS7GhhTlttSeBJ3LygVqijA7Kg2xxwXk77q4Fkx9w==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:4: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  include CarrierWave::MiniMagick
+                     ^):
+  
+app/uploaders/feature_uploader.rb:4: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:36:in `set_article'
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 17:06:05 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T04EMQnCuIcYt/QwycQm8QtFwtz/ktzshpLGZyIv2IphjhS7GhhTlttSeBJ3LygVqijA7Kg2xxwXk77q4Fkx9w==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  storage :file
+           ^):
+  
+app/uploaders/feature_uploader.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:36:in `set_article'
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 17:08:10 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T04EMQnCuIcYt/QwycQm8QtFwtz/ktzshpLGZyIv2IphjhS7GhhTlttSeBJ3LygVqijA7Kg2xxwXk77q4Fkx9w==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 31ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:08:10 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:10:14 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (16.2ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (15.6ms)
+Completed 200 OK in 95ms (Views: 84.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:17:33 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+   version :thumb do
+            ^
+/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:47: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/uploaders/feature_uploader.rb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/uploaders/feature_uploader.rb:47: syntax error, unexpected keyword_end, expecting end-of-input
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:22:00 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+   version :thumb do
+            ^
+/Users/ken86042897/Desktop/vote/app/uploaders/feature_uploader.rb:47: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/uploaders/feature_uploader.rb:32: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/uploaders/feature_uploader.rb:47: syntax error, unexpected keyword_end, expecting end-of-input
+app/models/article.rb:2:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:6:in `index'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:28:43 +0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (14.4ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (15.9ms)
+Completed 200 OK in 1477ms (Views: 1454.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:35:03 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (18.5ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (6.6ms)
+Completed 200 OK in 124ms (Views: 111.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:35:23 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.9ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 17:35:42 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (7.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.3ms)
+Completed 200 OK in 82ms (Views: 78.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:18:30 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (22.5ms)
+  [1m[36mMember Load (0.6ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (6.1ms)
+Completed 200 OK in 137ms (Views: 121.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:34:56 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (14.6ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (14.5ms)
+Completed 200 OK in 1676ms (Views: 1656.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-01-22 22:35:26 +0800
+Processing by ArticlesController#new as HTML
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (24.4ms)
+  Rendered articles/new.html.erb within layouts/application (26.8ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 114ms (Views: 90.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-01-22 22:35:56 +0800
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/iGma/Eo/Jlsy4PScO7dgB8HzwNwmDbGzQAkFUNndMjQ4bbh4vIXiK8uD/DOBdNkvmrNMyc8LTZcAVyYgRGdtQ==", "article"=>{"title"=>"圖片給我resize", "date"=>"2019012２", "feature"=>#<ActionDispatch::Http::UploadedFile:0x007f8a2f17b9a0 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190122-63707-1xsdgei.png>, @original_filename="螢幕快照 2019-01-22 下午1.53.58.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[feature]\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-22 \xE4\xB8\x8B\xE5\x8D\x881.53.58.png\"\r\nContent-Type: image/png\r\n">, "description"=>"", "body"=>""}, "commit"=>"submit"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "date", "description", "body", "created_at", "updated_at", "feature") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "圖片給我resize"], ["date", "2019012２"], ["description", ""], ["body", ""], ["created_at", "2019-01-22 14:35:56.384008"], ["updated_at", "2019-01-22 14:35:56.384008"], ["feature", "螢幕快照_2019-01-22_下午1.53.58.png"]]
+  ↳ app/controllers/articles_controller.rb:16
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:16
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 235ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:35:56 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (4.2ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (9.4ms)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:36:16 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (13.0ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (10.6ms)
+Completed 200 OK in 87ms (Views: 76.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:36:26 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (16.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (19.2ms)
+Completed 200 OK in 113ms (Views: 101.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:37:32 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.5ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.2ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/8/edit" for 127.0.0.1 at 2019-01-22 22:37:37 +0800
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/edit.html.erb within layouts/application (7.0ms)
+  Rendered application/_navbar.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 55.9ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/articles/8" for 127.0.0.1 at 2019-01-22 22:37:48 +0800
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNsupTT09MBTG2wX/TyJhzeDugjymNAtcJ1CbzRjHXN6qzMfdCgAFQp+UZy57S421/XfyTh5/XPQ0S/dyNFbxQ==", "article"=>{"title"=>"一次來個幾張_改改改", "date"=>"2019012２", "feature"=>#<ActionDispatch::Http::UploadedFile:0x007f8a2e9244f0 @tempfile=#<Tempfile:/var/folders/1c/xqhjv37n0s72b9lfwjw05pg40000gn/T/RackMultipart20190122-63707-1r6xvou.png>, @original_filename="螢幕快照 2019-01-20 下午11.55.35.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"article[feature]\"; filename=\"\xE8\x9E\xA2\xE5\xB9\x95\xE5\xBF\xAB\xE7\x85\xA7 2019-01-20 \xE4\xB8\x8B\xE5\x8D\x8811.55.35.png\"\r\nContent-Type: image/png\r\n">, "description"=>"新的課好刺激", "body"=>"<p><img alt=\"\" src=\"/ckeditor_assets/pictures/3/content_%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7_2019-01-13_%E4%B8%8A%E5%8D%8811.40.27.png\" style=\"width: 320px; height: 200px;\" /></p>\r\n"}, "commit"=>"submit", "id"=>"8"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/ken86042897/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "feature" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["feature", "螢幕快照_2019-01-20_下午11.55.35.png"], ["updated_at", "2019-01-22 14:37:48.396845"], ["id", 8]]
+  ↳ app/controllers/articles_controller.rb:24
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:24
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 343ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:37:48 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (3.0ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 22:57:10 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (22.5ms)
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (15.1ms)
+Completed 200 OK in 102ms (Views: 89.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 22:57:18 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY "articles"."id" DESC LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/controllers/articles_controller.rb:9
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Array:0x007f8a2dd64ca0>):
+  
+app/controllers/articles_controller.rb:9:in `homepage'
+Started GET "/" for 127.0.0.1 at 2019-01-22 22:58:19 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/controllers/articles_controller.rb:9
+Completed 406 Not Acceptable in 346ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (ArticlesController#homepage is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-22 22:59:06 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 6]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (2.3ms)
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (9.6ms)
+Completed 200 OK in 86ms (Views: 78.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 22:59:45 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at ASC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (1.6ms)
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (8.1ms)
+Completed 200 OK in 63ms (Views: 47.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:00:11 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (3.2ms)
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (13.6ms)
+Completed 200 OK in 112ms (Views: 88.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:02:51 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (329.2ms)
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<#<Class:0x007f8a29c0c668>:0x007f8a2e95f5a0>):
+    30:   <% end %> 
+    31: <% end %>
+    32: 
+    33: <%=link_to root do %>
+    34:  <i class="fa fa-pencil-square-o">看所有最新消息</i>
+    35: <% end %>
+  
+app/views/articles/homepage.html.erb:33:in `_app_views_articles_homepage_html_erb__4072781692092597739_70115724552520'
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:03:46 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (33.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.1ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 23:03:49 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 66ms (Views: 61.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 23:04:32 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (7.4ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/root" for 127.0.0.1 at 2019-01-22 23:04:34 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/root" for 127.0.0.1 at 2019-01-22 23:04:49 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 23:05:16 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.7ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/root" for 127.0.0.1 at 2019-01-22 23:05:21 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/root" for 127.0.0.1 at 2019-01-22 23:05:39 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/root"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:05:42 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (2.1ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (1.8ms)
+Completed 200 OK in 54ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-01-22 23:05:46 +0800
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY created_at DESC[0m
+  ↳ app/views/articles/index.html.erb:1
+  Rendered articles/index.html.erb within layouts/application (6.8ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.0ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-22 23:05:49 +0800
+Processing by ArticlesController#homepage as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 3]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/homepage.html.erb within layouts/application
+  Rendered articles/homepage.html.erb within layouts/application (3.5ms)
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? ORDER BY "members"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_navbar.html.erb:1
+  Rendered application/_navbar.html.erb (2.1ms)
+Completed 200 OK in 91ms (Views: 84.4ms | ActiveRecord: 0.5ms)
+
+

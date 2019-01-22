@@ -3,7 +3,10 @@ class ArticlesController < ApplicationController
 	before_action :set_article,only: [:show, :edit, :update, :destroy]
 
 	def index
-		@articles=Article.all
+		@articles=Article.order("created_at DESC")
+	end
+	def homepage
+		@articles=Article.order("created_at DESC").first(3)
 	end
 	def show
 		
@@ -12,8 +15,8 @@ class ArticlesController < ApplicationController
 		@article=Article.new
 	end
 	def create
-		article=Article.new articles_params
-		article.save
+		@article=Article.new articles_params
+		@article.save
 		 redirect_to '/articles'
 	end
 	def edit
@@ -30,7 +33,7 @@ class ArticlesController < ApplicationController
 		redirect_to articles_path
 	end
 	def articles_params
-		params.require(:article).permit(:title,:date,:description,:body)
+		params.require(:article).permit(:title,:date,:feature,:description,:body)
 	end
 	def set_article
 		@article=Article.find params[:id]

@@ -1,16 +1,30 @@
    <%= form_for @article do |f| %>
-        <div class="column is-10">
+       <!--  <div>
+            <%= f.label :title,'標題' %>
+              <div>
+              <%= f.text_field :title,require: true, :cols => 30, :rows => 10 %>
+              </div>
+        </div> -->
+
+
+        <div class="columns" >
           <div class="column is-10">
-            <div class="field">
+            <div class="field" >
             <%= f.label :title,'標題', class:'label' %>
-              <div class="control">
-              <%= f.text_field :title,class:'input',require: true %>
+              <div class="field" >
+              <%= f.text_field :title,require: true %>
               </div>
             </div>
             <div class="field">
               <%= f.label :date,'日期', class:'label' %>
               <div class="control">
               <%= f.text_field :date,class:'input' %>
+              </div>
+            </div>
+             <div class="field">
+              <%= f.label :feature,'圖', class:'label' %>
+              <div class="control">
+              <%= f.file_field :feature,class:'input' %>
               </div>
             </div>
             <div class="field">
@@ -22,7 +36,7 @@
               <div class="field">
              <%= f.label :body,'文章內容', class:'label' %>
               <div class="control">
-               <%= f.text_area :body,class:'textarea' %>
+               <%= f.cktext_area :body,rows: 10 %>
               </div>
             </div>
             <div class="field">
